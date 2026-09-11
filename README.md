@@ -1,7 +1,6 @@
 # Photon-counting LiDAR FPGA Pipeline
 
-本工程从 **SPAD 已经输出数字脉冲** 开始，目标不是做一个复杂的商用 LiDAR，
-而是把“SPAD → 时间测量 → Histogram → 距离”的数字处理链拆成一组可以独立运行、
+本工程从 **SPAD 已经输出数字脉冲** 开始，把“SPAD → 时间测量 → Histogram → 距离”的数字处理链拆成一组可以独立运行、
 独立仿真、最后再组合起来的教学工程。
 
 ## 主线
@@ -69,12 +68,4 @@ SPAD pulse
 
 这些都是后续可以继续扩展的独立工程；第一版优先保证主线清楚。
 
-## 仿真
-
-推荐 Icarus Verilog：
-
-iverilog -o sim tb_xxx.v xxx.v
-vvp sim
-
-Vivado 中可把每个目录作为独立 RTL Project。
 
